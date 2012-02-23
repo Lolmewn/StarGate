@@ -30,7 +30,7 @@ public class Sign_Change implements Listener{
 				return;
 			}
 			//Sign s = (Sign)event.getBlock().getState();
-			BlockFace face = ((Sign)event.getBlock().getState()).getAttachedFace();
+			BlockFace face = ((Sign)event.getBlock().getState().getData()).getAttachedFace();
 			Bukkit.getLogger().info("[DEBUG] " + face.toString() + " in " + face.getModX() + " " + face.getModZ());
 			if(!event.getBlock().getRelative(face).getType().equals(Material.OBSIDIAN)){
 				event.getPlayer().sendMessage("You have to place the sign on obsidian!");
