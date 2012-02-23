@@ -2,6 +2,7 @@ package nl.lolmewn.Stargate.Listeners;
 
 import nl.lolmewn.Stargate.Main;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.block.BlockFace;
 import org.bukkit.material.Sign;
@@ -30,6 +31,7 @@ public class Sign_Change implements Listener{
 			}
 			//Sign s = (Sign)event.getBlock().getState();
 			BlockFace face = ((Sign)event.getBlock().getState()).getAttachedFace();
+			Bukkit.getLogger().info("[DEBUG] " + face.toString() + " in " + face.getModX() + " " + face.getModZ());
 			if(!event.getBlock().getRelative(face).getType().equals(Material.OBSIDIAN)){
 				event.getPlayer().sendMessage("You have to place the sign on obsidian!");
 				event.setCancelled(true);
