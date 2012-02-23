@@ -28,7 +28,7 @@ public class Sign_Change implements Listener{
 				event.getPlayer().sendMessage("You do not have permissions to do this!");
 				return;
 			}
-			Sign s = (Sign)event.getBlock().getState();
+			//Sign s = (Sign)event.getBlock().getState();
 			BlockFace face = event.getBlock().getFace(event.getBlock());
 			if(!event.getBlock().getRelative(face).equals(Material.OBSIDIAN)){
 				event.getPlayer().sendMessage("You have to place the sign on obsidian!");

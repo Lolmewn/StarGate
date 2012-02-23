@@ -1,0 +1,5 @@
+name: StarGate
+author: Lolmewn
+version: 0.1
+main: nl.lolmewn.Stargate.Main
+description: Doing some stargate teleportation!
